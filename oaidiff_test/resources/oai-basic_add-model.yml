@@ -73,6 +73,12 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/Pets"
+        '418':
+          description: Added response for new model
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Person"
         default:
           description: unexpected error
           content:

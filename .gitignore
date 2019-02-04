@@ -13,7 +13,7 @@
 
 # IntelliJ/GoLand project files
 .idea 
-swagger-diff.iml
+oai-diff.iml
 
 # Don't commit dependencies, manage using dep
 vendor

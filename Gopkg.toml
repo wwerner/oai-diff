@@ -26,8 +26,14 @@
 
 
 [[constraint]]
+  name = "github.com/stretchr/testify"
+  version = "1.3.0"
+
+[[constraint]]
   name = "github.com/getkin/kin-openapi"
-  version = "0.1.0"
+  branch = "master"
+  source = "https://github.com/wwerner/kin-openapi.git"
+  #revision = "dcab226e02a98d6f25f57d4059cb9d97492bbac5"
 
 [prune]
   go-tests = true

@@ -10,9 +10,9 @@ ifdef::env-github[]
 :warning-caption: :warning:
 endif::[]
 
-= oai-diff
+= oaidiff
 
-`oai-diff` is a work-in-progress aiming to provide a simple CLI tool to generate semantic
+`oaidiff` is a work-in-progress aiming to provide a simple CLI tool to generate semantic
 diffs between two openAPI specification documents.
 
 It will be able to detect whether changes are breaking and allow for generating change logs, probably

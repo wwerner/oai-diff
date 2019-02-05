@@ -22,7 +22,7 @@ package oaidiff
 
 import "github.com/google/go-cmp/cmp"
 
-func Diff(x, y interface{}, opts ...cmp.Option) string {
+func Diff(x, y interface{}, opts ...cmp.Option) (string, []Change) {
 	r := new(myReporter)
 	opts = cmp.Options{cmp.Options(opts), r}
 	eq := cmp.Equal(x, y, opts...)
@@ -30,5 +30,5 @@ func Diff(x, y interface{}, opts ...cmp.Option) string {
 	if (d == "") != eq {
 		panic("inconsistent difference and equality results")
 	}
-	return d
+	return d, r.Changes()
 }

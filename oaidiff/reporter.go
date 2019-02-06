@@ -50,7 +50,7 @@ func (r *myReporter) Report(x, y reflect.Value, eq bool, p cmp.Path) {
 		r.diffs = append(r.diffs, s)
 		changes = append(changes, Change{
 			path:     p,
-			pathStr:  fmt.Sprintf("%v",p),
+			pathStr:  strings.TrimPrefix(fmt.Sprintf("%#v",p), "{*openapi3.Swagger}."),
 			oldValue: value.Format(x, value.FormatConfig{UseStringer: true}),
 			newValue: value.Format(y, value.FormatConfig{UseStringer: true}),
 		})
